@@ -57,7 +57,7 @@ export default function Layout(){
         color: 'white'
       }}>
         <img 
-          src='https://admission.mpublp.ac.in/Images/logo.png' 
+          src='/mpu-logo-final.png' 
           alt='University Logo' 
           style={{ width: 32, height: 32, marginRight: 8 }}
         />
@@ -165,7 +165,7 @@ export default function Layout(){
           
           <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', mr: 2 }}>
             <img 
-              src='https://admission.mpublp.ac.in/Images/logo.png' 
+              src='/mpu-logo-final.png' 
               alt='University Logo' 
               style={{ width: 40, height: 40, marginRight: 12 }}
             />

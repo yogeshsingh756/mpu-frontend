@@ -64,7 +64,7 @@ export default function Login(){
           <CardContent sx={{ p: { xs: 3, sm: 4, md: 5 } }}>
             <Box sx={{ textAlign: 'center', mb: 4 }}>
               <img 
-                src='https://admission.mpublp.ac.in/Images/logo.png' 
+                src='/mpu-logo-final.png' 
                 alt='University Logo' 
                 style={{ 
                   width: isMobile ? 60 : 80, 

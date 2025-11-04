@@ -85,7 +85,7 @@ export default function Dashboard(){
         <CardContent>
           <Stack direction="row" alignItems="center" spacing={2}>
             <img 
-              src='https://admission.mpublp.ac.in/Images/logo.png' 
+              src='/mpu-logo-final.png' 
               alt='University Logo' 
               style={{ width: isMobile ? 40 : 48, height: isMobile ? 40 : 48 }}
             />

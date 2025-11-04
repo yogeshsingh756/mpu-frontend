@@ -7,7 +7,7 @@ export default function ConfirmDialog({ open, onClose, onConfirm, title, message
       <DialogTitle sx={{ textAlign: 'center', pb: 1 }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
           <img 
-            src='https://admission.mpublp.ac.in/Images/logo.png' 
+            src='/mpu-logo-final.png' 
             alt='University Logo' 
             style={{ width: 48, height: 48 }}
           />
