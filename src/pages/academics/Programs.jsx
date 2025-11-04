@@ -14,6 +14,7 @@ import { getStreams } from "../../api/academics/streamsApi";
 import { getDisciplines } from "../../api/academics/disciplinesApi";
 import { searchPrograms, saveProgram, deleteProgram } from "../../api/academics/programsApi";
 import ConfirmDialog from '../../components/ConfirmDialog';
+import UniversityLoader from '../../components/UniversityLoader';
 
 export default function Programs(){
   const [streams, setStreams] = useState([]);
@@ -216,7 +217,7 @@ export default function Programs(){
           
           {loading ? (
             <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
-              <CircularProgress />
+              <UniversityLoader message="Loading programs..." />
             </Box>
           ) : (
             <TableContainer>

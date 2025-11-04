@@ -12,6 +12,7 @@ import {
 import { getStreams } from "../../api/academics/streamsApi";
 import { getDisciplines, saveDiscipline, deleteDiscipline } from "../../api/academics/disciplinesApi";
 import ConfirmDialog from '../../components/ConfirmDialog';
+import UniversityLoader from '../../components/UniversityLoader';
 
 export default function Disciplines() {
   const [streams, setStreams] = useState([]);
@@ -176,7 +177,7 @@ export default function Disciplines() {
           
           {loading ? (
             <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
-              <CircularProgress />
+              <UniversityLoader message="Loading disciplines..." />
             </Box>
           ) : (
             <TableContainer>

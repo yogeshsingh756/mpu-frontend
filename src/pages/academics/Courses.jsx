@@ -11,6 +11,7 @@ import {
 } from "@mui/icons-material";
 import { getCourses, saveCourse, deleteCourse } from "../../api/academics/coursesApi";
 import ConfirmDialog from '../../components/ConfirmDialog';
+import UniversityLoader from '../../components/UniversityLoader';
 
 export default function Courses(){
   const [rows, setRows] = useState([]);
@@ -171,7 +172,7 @@ export default function Courses(){
           
           {loading ? (
             <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
-              <CircularProgress />
+              <UniversityLoader message="Loading courses..." />
             </Box>
           ) : (
             <TableContainer>

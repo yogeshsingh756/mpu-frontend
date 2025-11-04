@@ -17,6 +17,7 @@ import { lookupCourses, getCourses } from "../../api/academics/coursesApi";
 import { saveMapping, deleteMapping } from "../../api/academics/mappingApi";
 import { getBootstrap } from "../../api/academics/bootstrapApi";
 import ConfirmDialog from '../../components/ConfirmDialog';
+import UniversityLoader from '../../components/UniversityLoader';
 
 export default function ProgramCourseMapping(){
   const [streams,setStreams]=useState([]);
@@ -208,7 +209,7 @@ export default function ProgramCourseMapping(){
             
             {loading ? (
               <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
-                <CircularProgress />
+                <UniversityLoader message="Loading syllabus..." />
               </Box>
             ) : (
               <TableContainer>

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
@@ -12,6 +13,7 @@ const schema = yup.object({
 })
 
 export default function Login(){
+  const [isRedirecting, setIsRedirecting] = useState(false)
   const { t } = useTranslation()
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
@@ -23,7 +25,10 @@ export default function Login(){
     try {
       const res = await api.post('/api/Auth/login', data)
       localStorage.setItem('token', res.data.token)
-      window.location.href = '/dashboard'
+      setIsRedirecting(true)
+      setTimeout(() => {
+        window.location.href = '/dashboard'
+      }, 100)
     } catch (err) {
       console.error('Login failed:', err)
     }
@@ -148,7 +153,7 @@ export default function Login(){
       </Container>
       
       {/* Loading Overlay */}
-      {isSubmitting && (
+      {(isSubmitting || isRedirecting) && (
         <Box
           sx={{
             position: 'fixed',
